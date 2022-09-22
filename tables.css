@@ -6,16 +6,15 @@ body{
     margin:0;
     text-align: center;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;   
+    overflow-y: scroll;
+    scroll-behavior: smooth; 
+    font-family: 'Playfair Display';    
 }
 
 .home-section{   
     max-width:100%;
     height: 100vh;
     background-color: lightgray;
-    /* background-image: url('https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80');    
-    background-position: center center;  
-    background-size:cover;    */
 }
 .home-section img{
     position: absolute;
@@ -29,18 +28,19 @@ body{
     width: 100%;   
     transform: translateX(-50%);
     color:white;
+    font-family: 'Abril Fatface';
 }
 .home-section p:nth-child(2){  
     top:20%;
     left:50%;
     width: 100%;
-    font-size: 5rem;   
+    font-size:6vw;   
 }
 .home-section p:nth-child(3){  
     top:45%;
     left:50%;
     width: 100%;
-    font-size: 3rem;   
+    font-size: 3vw;   
 }
 
 
@@ -53,18 +53,18 @@ body{
     padding: 2%;
     box-sizing: border-box;
     text-align: center;  
-    scroll-snap-align: start; 
+   
 }
 .table-content{    
     height: 100%;
     width:45%;    
-    box-sizing: border-box;
-     
+    box-sizing: border-box; 
+    scroll-snap-align: start;     
 }
 
 
 img{  
-    width:100%;  
+    max-width:100%;  
     height: 60%;  
 }
 .desc{    
@@ -74,13 +74,14 @@ img{
     text-align: center; 
     padding:20px;    
     box-sizing: border-box;
+    font-weight: 700; 
    
 }
 
 .desc p{
    height: 50%;
    margin:0;
-   font-size:1.5rem;    
+   font-size:2vw;    
    
 }
 
@@ -91,6 +92,8 @@ img{
     background-color: transparent;
     border: 3px solid black;
     font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Playfair Display';
     cursor: pointer;
 }
 
@@ -98,10 +101,23 @@ footer{
     width: 100%;
     background-color: black;
     color: white;
-    height: 200px;;
+    height:auto;
+    padding: 10px;
+    box-sizing: border-box;   
+    text-align: center;
+}
+footer div{
+    width:20%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    font-size: 3vw;
+}
+a:visited{
+    color: white;
 }
 
-@media screen and  (min-width:700px) {
+@media screen and (max-width:700px) {
     .home-section{
         height: 60vh;        
     }
@@ -128,28 +144,29 @@ footer{
     }
     .table-content{
         position: relative;
-        height: 100vh;
+        height: 50vh;
         width:100%;
     } 
+    img{
+        width: 100%;
+    }    
     .desc{
         position: relative;
         top:0;
+        padding: 0;
     }  
+    .desc p{
+        font-size: large;
+    }
     .desc button{
         position: relative;
-        top:20px;
-    }
-}
-@media screen and  (max-width:699px) {
-    .desc p{
-        font-size: 1.2rem;
-    }
-    .desc{
-        padding: 0;
-    }
-    .desc button{
-       
-        height: 30px;      
+        top:30px;
+        height: 30px;     
+        margin:0; 
         font-size:large;
+    }
+    footer{
+        position: absolute;
+        top:300vh;
     }
 }
