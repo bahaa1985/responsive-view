@@ -1,7 +1,8 @@
 html{
     width:100%;
     height: 100%;
-    box-sizing: border-box
+    box-sizing: border-box;
+    /* overflow-x: ; */
 }
 .home-section{
     position: absolute;
