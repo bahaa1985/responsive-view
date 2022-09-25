@@ -22,6 +22,7 @@ else{
     });
 
     
+<<<<<<< HEAD
 }
 
 let header=document.getElementsByTagName('header')[0]
@@ -58,3 +59,6 @@ if(window_width<800){
     })
 }
 
+=======
+}
+>>>>>>> 9fab86ff980a01699ed436435d695ad1fd7da8f4
