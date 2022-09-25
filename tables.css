@@ -11,68 +11,114 @@ body{
     font-family: 'Playfair Display';    
 }
 
+header{
+    position: fixed;
+    top:0;left:0;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px; 
+    font-size: 1rem;;
+    height: auto;  
+    width:100%; 
+    z-index:1; 
+    box-sizing: border-box;    
+}
+.header-bars{
+    display: none;
+    color: white;
+}
+.ted{
+    line-height: 50%;
+}
+.header-links{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+ul{
+    /* padding-inline-start:0 */
+}
+li{
+    list-style-type: none;
+}
+
+.header-links a{   
+    margin:auto 10px;
+    color:rgb(243, 237, 237);
+}
+
 .home-section{   
     max-width:100%;
-    height: 100vh;
-    background-color: lightgray;
+    height: 100vh;   
 }
+
 .home-section img{
     position: absolute;
     top:0;left:0;
-    max-width: 100%;
+    width: 100%;
     height: 100%;    
-    mix-blend-mode: darken;
 }
+
 .home-section p{
-    position: absolute;        
-    width: 100%;   
+    position: absolute;             
     transform: translateX(-50%);
     color:white;
     font-family: 'Abril Fatface';
+    opacity: 100;
 }
+
+@keyframes ted_animation{
+    from{opacity:0};
+    to {opacity:100}
+}
+
 .home-section p:nth-child(2){  
     top:20%;
     left:50%;
-    width: 100%;
+    width: auto;
     font-size:6vw;   
+    animation-name: ted_animation;
+    animation-duration: 2s;
 }
+
 .home-section p:nth-child(3){  
     top:45%;
     left:50%;
-    width: 100%;
-    font-size: 3vw;   
+    width: auto;
+    font-size: 3vw; 
+    animation-name: ted_animation;
+    animation-duration: 4s;  
 }
-
 
 .section-tables{
     width:100%;
     height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;    
+    display: flex;  
+    justify-content: space-around;    
     padding: 2%;
     box-sizing: border-box;
     text-align: center;  
    
 }
+
 .table-content{    
-    height: 100%;
+    height: auto;
     width:45%;    
     box-sizing: border-box; 
-    scroll-snap-align: start;     
+    scroll-snap-align: start;
+    opacity:0;
 }
-
 
 img{  
     max-width:100%;  
-    height: 60%;  
+    height: 50%;  
 }
+
 .desc{    
     display: block;     
     width:100%;        
-    height: 40%;       
-    text-align: center; 
-    padding:20px;    
+    height: auto;       
+    text-align: center;   
     box-sizing: border-box;
     font-weight: 700; 
    
@@ -80,15 +126,17 @@ img{
 
 .desc p{
    height: 50%;
-   margin:0;
-   font-size:2vw;    
+   margin:auto;
+   width:90%;
+   font-size:1.5vw;    
    
 }
 
 .desc button{   
-    width:120px;
-    height: 50px;
+    width:50%;
+    height: 40px;
     margin-top: 5%;
+    padding:0;
     background-color: transparent;
     border: 3px solid black;
     font-size: 1rem;
@@ -106,6 +154,7 @@ footer{
     box-sizing: border-box;   
     text-align: center;
 }
+
 footer div{
     width:20%;
     display: flex;
@@ -113,60 +162,78 @@ footer div{
     justify-content: space-between;
     font-size: 3vw;
 }
+
 a:visited{
     color: white;
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:800px) {
+    header{
+        background-color: black;
+        display: block;
+        padding: 0;
+    }
+    .header-bars{
+        display: block;
+    }
+    .header-links{
+        display: none;
+        text-align: center;
+    }
     .home-section{
-        height: 60vh;        
+        height: 100vh;   
+        background-color: white;       
     }
     .home-section img{
-        height: 60vh;
-    }
+        position: static;
+        height: 50%;
+    }   
     .home-section p:nth-child(2){
+        position: absolute; 
         top:60vh;
         font-size: 3rem;
+        height: 25%;
         width:100%;
+        margin:auto;
         color:black;
     }
     .home-section p:nth-child(3){
-        top:70vh;
+        position: absolute;
+        top:70vh; 
+        height: 25%;
         font-size: 2rem;
         width:100%;
         color:black;
     }
     .section-tables{
-        position: absolute;
+        /* position: absolute; */
         display: block;        
-        top:100vh;
+        /* top:100vh; */
         padding: 0;        
     }
-    .table-content{
-        position: relative;
-        height: 50vh;
-        width:100%;
+    .table-content{       
+        height: auto;
+        width:75%;
+        margin:auto;       
     } 
     img{
+        height: 50%;
         width: 100%;
     }    
-    .desc{
-        position: relative;
-        top:0;
-        padding: 0;
+    .desc{        
+        padding: 5%;
     }  
     .desc p{
-        font-size: large;
+        font-size: 3vw;
     }
-    .desc button{
-        position: relative;
-        top:30px;
+    .desc button{       
+        width:30%;
         height: 30px;     
-        margin:0; 
+        margin:15px; 
         font-size:large;
     }
     footer{
-        position: absolute;
-        top:300vh;
+        position: static; 
+        /* top:100%; */
     }
 }
