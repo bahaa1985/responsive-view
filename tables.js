@@ -22,43 +22,62 @@ else{
     });
 
     
-<<<<<<< HEAD
 }
 
 let header=document.getElementsByTagName('header')[0]
+let header_bars=document.getElementsByClassName('header-bars')[0]
+let header_links=document.getElementsByClassName('header-links')[0]
 let home_section=document.getElementsByClassName('home-section')[0]
+console.log(header_links)
 let home_top=0
-if(window_width>800){
-    document.addEventListener('scroll',()=>{
+let toggled=false
+
+window.addEventListener('onresize',()=>{
+    if(window_width>=800) {
+        console.log('resized')
+        header_links.style.display='flex'            
+    }
+    else{
+        header_links.style.display='none'
+        header_bars.addEventListener('click',()=>{
+            if(!toggled) {
+                toggled=true
+                header_links.style.display='block'           
+            }
+            else {
+                toggled=false
+                header_links.style.display='none'
+            }
+        })
+    }
+})
+
+document.addEventListener('scroll',()=>{
+    if(window_width>=800) {
         home_top=home_section.getBoundingClientRect().y
-        if(home_top!=0){
+        if(home_top<0){
             header.style.backgroundColor='black'
         }
         else{
             header.style.backgroundColor='transparent'
         }
-    })
+    }   
+})
+
+function clickBars(){
+    if(!toggled) {
+        toggled=true
+        header_links.style.display='block'           
+    }
+    else {
+        toggled=false
+        header_links.style.display='none'
+    }
 }
 
 
 
-let header_bars=document.getElementsByClassName('header-bars')[0]
-let header_links=document.getElementsByClassName('header-links')[0]
-let toggled=false
-if(window_width<800){
-    header_links.style.display='none'
-    header_bars.addEventListener('click',()=>{
-        if(!toggled) {
-            toggled=true
-            header_links.style.display='block'           
-        }
-        else {
-            toggled=false
-            header_links.style.display='none'
-        }
-    })
-}
 
-=======
-}
->>>>>>> 9fab86ff980a01699ed436435d695ad1fd7da8f4
+
+
+
