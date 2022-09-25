@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="tables.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/66227f2fb9.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 
 <body>      
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display">      
-    <header>    
-        <div class="header-bars" onclick="clickBars()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-        <!-- <div class="ted">Ted's Tables</div>            -->
+    <!-- <header>    
+        <div class="header-bars" >
+            <i class="fa-solid fa-bars" onclick="clickBars()"></i>
+        </div>     
         <ul class="header-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">Tables</a></li>
@@ -24,7 +27,29 @@
             <li><a href="#">About Ted</a></li>
             <li><a href="#">Contact us</a></li>
         </ul>      
-    </header>
+    </header> -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tables</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Design your table</a>
+            </li>   
+            <li class="nav-item">
+                <a class="nav-link" href="#">About Ted</a>
+              </li> 
+          </ul>
+        </div>  
+    </nav>
     <section class="home-section">
         <img src="https://images.unsplash.com/photo-1557784415-3bdc60b1c02b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1475&q=80"/>
         <p>Ted's Tables</p>

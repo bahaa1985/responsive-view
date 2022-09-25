@@ -11,7 +11,7 @@ body{
     font-family: 'Playfair Display';    
 }
 
-header{
+/* header{
     position: fixed;
     top:0;left:0;
     display: flex;
@@ -27,17 +27,13 @@ header{
     display: none;
     color: white;
 }
-.ted{
-    line-height: 50%;
-}
+
 .header-links{
     display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
+    flex-direction: column; */
+    /* justify-content: center;
 }
-ul{
-    /* padding-inline-start:0 */
-}
+
 li{
     list-style-type: none;
 }
@@ -45,7 +41,8 @@ li{
 .header-links a{   
     margin:auto 10px;
     color:rgb(243, 237, 237);
-}
+    text-decoration: none;
+} */
 
 .home-section{   
     max-width:100%;
@@ -165,6 +162,7 @@ footer div{
 
 a:visited{
     color: white;
+    text-decoration: none;
 }
 
 @media screen and (max-width:799px) {
@@ -175,12 +173,25 @@ a:visited{
     }
     .header-bars{
         display: block;
+        background-color: black;
+        height: 40px;
+        z-index: 1;
     }
     .header-links{
         display: none;
         text-align: center;
+        background-color: black;
         z-index: 1;
-    }
+    } 
+    .header-links-toggled{
+        display: block;
+    }   
+    .header-links-toggled{
+        display: block;
+    }   
+    ul{
+        margin:0;padding:0;
+    }   
     .home-section{
         height: 100vh;   
         background-color: white;       
